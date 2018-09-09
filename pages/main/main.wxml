@@ -1,0 +1,38 @@
+ <view class='page'>
+  <view class='top'>
+    <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <view class="modalDlg" wx:if="{{showModal}}">
+      <image class='modalDlg_image' src="/image/goods/10.png"></image>
+      <text class='modalDlg_text'>暂无数据</text>
+      <image class='modalDlg_close' bindtap="go" src='/image/goods/11.png'></image>
+    </view>
+    <!--顶部轮播图-->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" class='nav_swiper'>
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--中间功能区-->
+  <view class='center'>
+    <view class='center_left' bindtap='detailtap'>
+      <image class='center_image' src='/image/icon/docter.png'></image>
+      <text class='center_text'>预约挂号</text>
+    </view>
+    <view class='center_right' bindtap='detailtap'>
+      <image class='center_image' src='/image/icon/hospital.png'></image>
+      <text class='center_text'>科室官网</text>
+    </view>
+  </view>
+  <!--底部功能区-->
+  <view class='bottom'>
+    <block wx:for="{{bottompartlist}}" >
+      <view class='bottom_part' bindtap='detailtap' data-id='{{item.id}}' data-url='{{item.url}}'>
+        <image src='{{item.imagepath}}' class='bottom_icon'></image>
+        <text class='bottom_text'>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</view>

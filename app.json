@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/list/list",
+    "pages/people/people",
+    "pages/heathy/heathy",
+    "pages/article/article"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#9B9B9B",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#1296db",
+    "borderStyle": "outset",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "/image/icon/home1.png",
+        "selectedIconPath": "/image/icon/home2.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "就诊记录",
+        "iconPath": "/image/icon/list1.png",
+        "selectedIconPath": "/image/icon/list2.png"
+      },
+      {
+        "pagePath": "pages/people/people",
+        "text": "个人中心",
+        "iconPath": "/image/icon/people1.png",
+        "selectedIconPath": "/image/icon/people2.png"
+      }
+    ]
+  }
+}
